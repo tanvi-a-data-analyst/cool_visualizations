@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanvi | Data Visualizations & Stories</title>
+    <title>Tanvi Divekar | Data Visualizations & Stories</title>
     <style>
         :root {
-            --bg-color: #fafafa;
-            --text-color: #1a1a1a;
-            --card-bg: #ffffff;
-            --accent-color: #2b6cb0;
-            --border-color: #e2e8f0;
-            --subtext-color: #4a5568;
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --subtext-color: #666666;
+            --yellow-accent: #ffcc00;
+            --red-accent: #e54d42;
+            --border-color: #eee;
             --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
@@ -24,53 +24,128 @@
             line-height: 1.6;
         }
 
-        header {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem 2rem 1.5rem;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--subtext-color);
-            max-width: 650px;
-            margin-bottom: 1.5rem;
-        }
-
-        .links {
+        /* TOP NAVIGATION BAR */
+        .top-nav {
             display: flex;
-            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
         }
 
-        .links a {
-            color: var(--accent-color);
+        .logo {
+            width: 40px;
+            height: 40px;
+            background-color: #ffcc00;
+            border: 2px solid #000;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 3px 3px 0px #000;
+        }
+
+        .nav-links a {
+            margin-left: 1.8rem;
             text-decoration: none;
+            color: var(--text-color);
             font-weight: 500;
             font-size: 0.95rem;
         }
 
-        .links a:hover {
+        .nav-links a:hover {
+            color: var(--red-accent);
+        }
+
+        /* HERO HEADER */
+        .hero {
+            text-align: center;
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.03em;
+        }
+
+        /* Red Divider Line with Center Dot */
+        .divider-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto 1.5rem auto;
+            width: 80px;
+            height: 2px;
+            background-color: var(--red-accent);
+            position: relative;
+        }
+
+        .divider-line::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--red-accent);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .hero p {
+            color: var(--subtext-color);
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        /* YELLOW CATEGORY FILTER BAR */
+        .filter-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .filter-bar {
+            background-color: var(--yellow-accent);
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0.8rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #333;
+            padding: 0.2rem 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            color: var(--red-accent);
             text-decoration: underline;
         }
 
+        /* MAIN GRID & CARDS */
         main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 1.5rem 4rem 1.5rem;
+            padding: 0 1rem 4rem 1rem;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         @media (max-width: 500px) {
@@ -80,29 +155,35 @@
         }
 
         .card {
-            background: var(--card-bg);
+            background: #fff;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
         }
 
-        .card-viz-container {
+        /* Live Interactive Thumbnail Container */
+        .card-interactive-thumb {
             width: 100%;
-            background: #f7fafc;
+            height: 380px;
+            background: #fbfbfb;
             border-bottom: 1px solid var(--border-color);
-            overflow: hidden;
-            padding: 1rem 0;
+            position: relative;
+        }
+
+        .card-interactive-thumb iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .card-body {
-            padding: 1.5rem;
+            padding: 1.25rem 1.5rem;
         }
 
         .card-tag {
@@ -119,23 +200,21 @@
         }
 
         .card-title {
-            font-size: 1.25rem;
-            margin: 0 0 0.5rem 0;
-            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 0 0 0.4rem 0;
+            font-weight: 700;
         }
 
         .card-text {
             color: var(--subtext-color);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             margin-bottom: 1rem;
         }
 
         .card-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent-color);
+            color: var(--red-accent);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-decoration: none;
         }
 
@@ -154,42 +233,59 @@
 </head>
 <body>
 
-    <header>
-        <h1>Tanvi</h1>
-        <p class="subtitle">Data Analyst & Visual Storyteller. Crafting focused, bite-sized visual explorations across public policy, sports history, culture, and social trends.</p>
-        <div class="links">
-            <a href="https://github.com/tanvi-a-data-analyst/cool_visualizations" target="_blank">GitHub Repository</a>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    <!-- TOP NAVIGATION -->
+    <div class="top-nav">
+        <div class="logo">T</div>
+        <div class="nav-links">
+            <a href="https://github.com/tanvi-a-data-analyst" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/tanvi-divekar/" target="_blank">LinkedIn</a>
         </div>
-    </header>
+    </div>
 
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Tanvi Divekar</h1>
+        <div class="divider-line"></div>
+        <p>Data Analyst, Modeller & Visual Storyteller. Glad to host you here. This is a collection of what I do when I go down a rabbit hole of discovering new ideas with the help of data.</p>
+    </div>
+
+    <!-- CATEGORY FILTER BAR -->
+    <div class="filter-container">
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterProjects('all')">ALL CATEGORIES</button>
+            <button class="filter-btn" onclick="filterProjects('policy')">SOCIAL POLICY</button>
+            <button class="filter-btn" onclick="filterProjects('sports')">SPORTS ANALYTICS</button>
+        </div>
+    </div>
+
+    <!-- PROJECT GRID -->
     <main>
         <div class="grid">
 
-            <!-- PROJECT CARD 1: Literacy Jump -->
-            <div class="card">
-                <div class="card-viz-container">
-                    <iframe title="Gap of Literacy Rates" aria-label="Range Plot" id="datawrapper-chart-hDYaR" src="https://datawrapper.dwcdn.net/hDYaR/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450" data-external="1"></iframe>
-                    <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+            <!-- PROJECT 1: Literacy Jump -->
+            <div class="card" data-category="policy">
+                <div class="card-interactive-thumb">
+                    <!-- Embedded live chart thumbnail -->
+                    <iframe title="Gap of Literacy Rates" src="https://datawrapper.dwcdn.net/hDYaR/1/" scrolling="no"></iframe>
                 </div>
                 <div class="card-body">
                     <span class="card-tag">Social Policy</span>
                     <h2 class="card-title">Inter-Generational Literacy Jump</h2>
-                    <p class="card-text">Analyzing NFHS-5 data to uncover how Northern Indian youth are closing a 50-year literacy gap in a single generation compared to Southern baselines.</p>
-                    <a href="https://datawrapper.dwcdn.net/hDYaR/1/" target="_blank" class="card-link">View Fullscreen Chart &rarr;</a>
+                    <p class="card-text">Using Datawrapper, I am looking at the NFHS-5 data to uncover how Northern Indian youth are closing a 50-year literacy gap in a single generation compared to Southern baselines.</p>
+                    <a href="https://datawrapper.dwcdn.net/hDYaR/1/" target="_blank" class="card-link">VIEW FULLSCREEN CHART &rarr;</a>
                 </div>
             </div>
 
-            <!-- PROJECT CARD 2: Placeholder for Tennis Project -->
-            <div class="card">
-                <div class="card-viz-container" style="display: flex; align-items: center; justify-content: center; height: 300px; color: #a0aec0; font-size: 0.9rem;">
+            <!-- PROJECT 2: Tennis Project Placeholder -->
+            <div class="card" data-category="sports">
+                <div class="card-interactive-thumb" style="display: flex; align-items: center; justify-content: center; color: #a0aec0; font-size: 0.9rem;">
                     [ Next Project: Tennis Head-to-Head Matrix ]
                 </div>
                 <div class="card-body">
                     <span class="card-tag">Sports Analytics</span>
-                    <h2 class="card-title">The Big Three Rivalry Network</h2>
+                    <h2 class="card-title">The Tennis Big Three Rivalry Network</h2>
                     <p class="card-text">A surface-by-surface decomposition of 150+ meetings between Federer, Nadal, and Djokovic over two decades.</p>
-                    <a href="#" class="card-link">Coming Soon &rarr;</a>
+                    <a href="#" class="card-link">COMING SOON &rarr;</a>
                 </div>
             </div>
 
@@ -197,8 +293,26 @@
     </main>
 
     <footer>
-        &copy; 2026 Tanvi • Built with Datawrapper & GitHub Pages
+        &copy; 2026 Tanvi Divekar • Built with Datawrapper & GitHub Pages
     </footer>
 
+    <!-- JavaScript Filter Functionality -->
+    <script>
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
