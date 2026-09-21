@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanvi | Data Visualizations & Stories</title>
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #1a1a1a;
+            --card-bg: #ffffff;
+            --accent-color: #2b6cb0;
+            --border-color: #e2e8f0;
+            --subtext-color: #4a5568;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--subtext-color);
+            max-width: 650px;
+            margin-bottom: 1.5rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+        }
+
+        .card-viz-container {
+            width: 100%;
+            background: #f7fafc;
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: var(--subtext-color);
+            font-size: 0.92rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: var(--subtext-color);
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tanvi</h1>
+        <p class="subtitle">Data Analyst & Visual Storyteller. Crafting focused, bite-sized visual explorations across public policy, sports history, culture, and social trends.</p>
+        <div class="links">
+            <a href="https://github.com/tanvi-a-data-analyst/cool_visualizations" target="_blank">GitHub Repository</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="grid">
+
+            <!-- PROJECT CARD 1: Literacy Jump -->
+            <div class="card">
+                <div class="card-viz-container">
+                    <iframe title="Gap of Literacy Rates" aria-label="Range Plot" id="datawrapper-chart-hDYaR" src="https://datawrapper.dwcdn.net/hDYaR/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450" data-external="1"></iframe>
+                    <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Social Policy</span>
+                    <h2 class="card-title">Inter-Generational Literacy Jump</h2>
+                    <p class="card-text">Analyzing NFHS-5 data to uncover how Northern Indian youth are closing a 50-year literacy gap in a single generation compared to Southern baselines.</p>
+                    <a href="https://datawrapper.dwcdn.net/hDYaR/1/" target="_blank" class="card-link">View Fullscreen Chart &rarr;</a>
+                </div>
+            </div>
+
+            <!-- PROJECT CARD 2: Placeholder for Tennis Project -->
+            <div class="card">
+                <div class="card-viz-container" style="display: flex; align-items: center; justify-content: center; height: 300px; color: #a0aec0; font-size: 0.9rem;">
+                    [ Next Project: Tennis Head-to-Head Matrix ]
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Sports Analytics</span>
+                    <h2 class="card-title">The Big Three Rivalry Network</h2>
+                    <p class="card-text">A surface-by-surface decomposition of 150+ meetings between Federer, Nadal, and Djokovic over two decades.</p>
+                    <a href="#" class="card-link">Coming Soon &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Tanvi • Built with Datawrapper & GitHub Pages
+    </footer>
+
+</body>
+</html>
