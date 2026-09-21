@@ -6,6 +6,9 @@ This visualization explores the shift in literacy rates between older adults (**
 
 <iframe src="https://datawrapper.dwcdn.net/hDYaR/1/" width="100%" height="528" frameborder="0" title="Gap of Literacy Rates"></iframe>
 
+[![Gap of Literacy Rates](literacy_rates_gap.png)](https://datawrapper.dwcdn.net/hDYaR/1/)
+*Click the image above to open the live interactive visualization.*
+
 ### Key Insights
 * **The Northern Surge:** States like Bihar and Uttar Pradesh demonstrate an inter-generational jump of nearly **+50 percentage points**, with youth literacy reaching over 80%.
 * **Southern Stability:** Southern states like Kerala and Tamil Nadu show smaller numeric jumps because their older-generation baselines were already significantly higher.
