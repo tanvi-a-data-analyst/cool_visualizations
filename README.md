@@ -4,8 +4,6 @@ A collection of data visualization mini-projects exploring social trends, sports
 ## 1. The Inter-Generational Literacy Jump in India
 This visualization explores the shift in literacy rates between older adults (**Ages 50+**) and today's youth (**Ages 15–24**) across Northern vs. Southern Indian states using **NFHS-5 data**.
 
-<iframe src="https://datawrapper.dwcdn.net/hDYaR/1/" width="100%" height="528" frameborder="0" title="Gap of Literacy Rates"></iframe>
-
 [![Gap of Literacy Rates](literacy_rates_gap.png)](https://datawrapper.dwcdn.net/hDYaR/1/)
 *Click the image above to open the live interactive visualization.*
 
