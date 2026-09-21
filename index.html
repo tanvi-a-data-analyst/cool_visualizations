@@ -83,7 +83,7 @@
 
         /* Dashed Line Separator */
         .dashed-line {
-            width: 120px;
+            width: 200px;
             margin: 1.2rem auto;
             border: none;
             border-top: 2px dashed var(--navy-accent);
@@ -116,8 +116,8 @@
             background: none;
             border: none;
             font-family: var(--font-segoe);
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.80rem;
+            font-weight: 400;
             letter-spacing: 0.05em;
             text-transform: uppercase;
             cursor: pointer;
@@ -384,7 +384,7 @@
     <div class="hero">
         <h1>Tanvi Divekar</h1>
         <hr class="dashed-line">
-        <p>Data Analyst, Modeller & Visual Storyteller. Glad to host you here. This is a collection of what I do when I go down a rabbit hole of discovering new ideas with the help of data.</p>
+        <p>Data Analyst, Modeller & Visual Storyteller. Glad to host you here! This is a small collection of what I do when I go down a data rabbit hole.</p>
     </div>
 
     <!-- CATEGORY FILTER BAR -->
@@ -403,26 +403,52 @@
             <!-- PROJECT 1: Literacy Jump -->
             <div class="card" data-category="policy">
                 <div class="card-interactive-thumb">
-                    <iframe title="Gap of Literacy Rates" src="https://datawrapper.dwcdn.net/hDYaR/1/" scrolling="no"></iframe>
+                    <iframe title="Literacy Rate Gaps between Older & Younger Women" src="https://datawrapper.dwcdn.net/LtFEM/1/" scrolling="no"></iframe>
                 </div>
                 <div class="card-body">
                     <span class="card-tag">Social Policy</span>
                     <h2 class="card-title">Inter-Generational Literacy Jump</h2>
-                    <p class="card-text">Using Datawrapper, I am looking at the NFHS-5 data to uncover how Northern Indian youth are closing a 50-year literacy gap in a single generation compared to Southern baselines.</p>
-                    <a href="https://datawrapper.dwcdn.net/hDYaR/1/" target="_blank" class="card-link">VIEW FULLSCREEN CHART &rarr;</a>
+                    <p class="card-text">Using Datawrapper, I am looking at the NFHS-5 data to understand how Northern Indian youth are closing a 50-year literacy gap in a single generation compared to Southern baselines.</p>
+                    <a href="https://datawrapper.dwcdn.net/LtFEM/1/" target="_blank" class="card-link">VIEW FULLSCREEN CHART &rarr;</a>
                 </div>
             </div>
 
-            <!-- PROJECT 2: Tennis Project Placeholder -->
+            <!-- PROJECT 2: Airplane Customer Satisfaction Model -->
+            <div class="card" data-category="customer behaviour">
+                <div class="card-interactive-thumb"> 
+                    <iframe title="Airline Passenger Satisfaction Feedback" src="https://github.com/tanvi-a-data-analyst/AirlinePassenger-Satisfaction-Modeling" scrolling="no"></iframe>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Customer Behaviour</span>
+                    <h2 class="card-title">Modelling Airline Passengers' Satisfaction Feedback</h2>
+                    <p class="card-text">Customer satisfaction scores from 120,000+ airline passengers, including additional information about each passenger, their flight, and type of travel, and their evaluation of different factors like cleanliness, comfort, service, and overall experience. To predict what variables determine a satisfactory or a dissatisfactory travel experience and how accurately can a passenger's feedback be predicted so that the airline can improve its services accordingly.</p>
+                    <a href="https://github.com/tanvi-a-data-analyst/AirlinePassenger-Satisfaction-Modeling" target="_blank" class="card-link">VIEW FULL CODE &rarr;</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: Use DENEB to show how many days our factories are shut down for -->
+            <div class="card" data-category="customer behaviour">
+                <div class="card-interactive-thumb"> 
+                    <iframe title="Creating a Calendar Heatmap using DENEB in Power BI" src="https://github.com/tanvi-a-data-analyst/Creating-a-Calendar-Heatmap-using-Deneb-custom-visual-in-Power-BI/tree/main" scrolling="no"></iframe>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Supply Chain</span>
+                    <h2 class="card-title">Calendar Heatmap using DENEB custom visual in Power BI</h2>
+                    <p class="card-text">Required a visual that would accurately (and beautifully) depict the number of days our organization's factories are shut down for across a year. These shutdown days are marked against a year's week numbers. One factory combined with its production line, can have multiple shutdown instances across a year.</p>
+                    <a href="https://github.com/tanvi-a-data-analyst/Creating-a-Calendar-Heatmap-using-Deneb-custom-visual-in-Power-BI/tree/main" target="_blank" class="card-link">VIEW HEATMAP &rarr;</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: Tennis Project Placeholder -->
             <div class="card" data-category="sports">
                 <div class="card-interactive-thumb" style="display: flex; align-items: center; justify-content: center; color: #a0aec0; font-size: 0.9rem;">
-                    [ Next Project: Tennis Head-to-Head Matrix ]
+                    [ Next Project: Who will win the 2027 Australian Open? ]
                 </div>
                 <div class="card-body">
                     <span class="card-tag">Sports Analytics</span>
-                    <h2 class="card-title">The Tennis Big Three Rivalry Network</h2>
-                    <p class="card-text">A surface-by-surface decomposition of 150+ meetings between Federer, Nadal, and Djokovic over two decades.</p>
-                    <a href="#" class="card-link">COMING SOON &rarr;</a>
+                    <h2 class="card-title">Predicting the next Grand Slam winner</h2>
+                    <p class="card-text">A model based on ATP rankings, match wins, and other tennis stats to predict who might win the 2027 Australian Open.</p>
+                    <a href="#" class="card-link">Coming Soon &rarr;</a>
                 </div>
             </div>
 
@@ -435,7 +461,7 @@
             <button class="modal-close" onclick="closeAboutModal()">&times;</button>
             
             <h2>Hi, I'm Tanvi</h2>
-            <p>Data Analyst who panics (a little bit) when dashboards break silently, so I started building the data systems that catch it before stakeholders do.</p>
+            <p>A data analyst who hates it when dashboards break silently, so I started building the data systems that catch it before stakeholders do.</p>
             <p><strong>Currently:</strong> Supply Chain Analytics at Novonesis (Bengaluru) - living inside Power BI, KNIME, Snowflake. Sometimes Python, and lately Azure OpenAI too.</p>
 
             <h3 class="about-section-title">What I Actually Do</h3>
