@@ -14,7 +14,7 @@ This visualization explores the shift in literacy rates between older adults (**
 ## 2. The Difference of Literacy Rates between Women of Different Generations in India:
 Look at the gap in the literacy rates between the previous generation and the young women in India across several states. 
 
-[![Gap of Literacy Rates](literacy_rates_gap_women.png)](https://datawrapper.dwcdn.net/hDYaR/1/)
+[![Gap of Literacy Rates](literacy_rates_gaps_women.png)](https://datawrapper.dwcdn.net/hDYaR/1/)
 *Click the image above to open the live interactive visualization.*
 
 ### Key Insights:
