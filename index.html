@@ -170,12 +170,19 @@
             background: #fbfbfb;
             border-bottom: 1px solid var(--border-color);
             position: relative;
+            overflow: hidden;
         }
 
-        .card-interactive-thumb iframe {
+        .card-interactive-thumb iframe,
+        .card-interactive-thumb img {
             width: 100%;
             height: 100%;
             border: none;
+            display: block;
+        }
+        
+        .card-interactive-thumb img {
+            object-fit: contain;
         }
 
         .card-body {
@@ -405,7 +412,8 @@
             <!-- PROJECT 1: Literacy Jump -->
             <div class="card" data-category="policy">
                 <div class="card-interactive-thumb">
-                    <iframe title="Literacy Rate Gaps between Older & Younger Women" src="https://datawrapper.dwcdn.net/LtFEM/1/" scrolling="no"></iframe>
+                    <img src="assets/dots gif.gif"
+                         alt="Literacy Rates">
                 </div>
                 <div class="card-body">
                     <span class="card-tag">Social Policy</span>
